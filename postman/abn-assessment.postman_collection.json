@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "c6d6edf9-b95e-4d03-a737-d7ff3b09d536",
+		"name": "abn-assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getall",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8882/api/v1/recipe/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8882",
+					"path": [
+						"api",
+						"v1",
+						"recipe",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create recipe",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"cookingInstruction\": \"test\",\n  \"ingredients\": [\n    {\n      \"ingredientDesciption\": \"test\",\n      \"ingredientName\": \"test\"\n    }\n  ],\n  \"name\": \"test\",\n  \"numberOfPerson\": 3,\n  \"vegetarian\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8882/api/v1/recipe/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8882",
+					"path": [
+						"api",
+						"v1",
+						"recipe",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update recipe",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=utf8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 5,\n    \"name\": \"test\",\n    \"createDate\": \"2021-09-07 09:27\",\n    \"numberOfPerson\": 5,\n    \"cookingInstruction\": \"test\",\n    \"ingredients\": [\n        {\n            \"id\": 10,\n            \"ingredientName\": \"test\",\n            \"ingredientDesciption\": \"test\"\n        }\n    ],\n    \"vegetarian\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8882/api/v1/recipe/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8882",
+					"path": [
+						"api",
+						"v1",
+						"recipe",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update recipe Negetive",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=utf8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 0,\n    \"name\": \"string\",\n    \"createDate\": \"2021-08-30 19:54\",\n    \"numberOfPerson\": 0,\n    \"cookingInstruction\": \"test\",\n    \"ingredients\": [\n        {\n            \"id\": 0,\n            \"ingredientName\": \"string\",\n            \"ingredientDesciption\": \"string\"\n        }\n    ],\n    \"vegetarian\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8882/api/v1/recipe/5000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8882",
+					"path": [
+						"api",
+						"v1",
+						"recipe",
+						"5000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Recipe By ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=utf8"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8882/api/v1/recipe/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8882",
+					"path": [
+						"api",
+						"v1",
+						"recipe",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Recipe By ID Negetive",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=utf8"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8882/api/v1/recipe/5000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8882",
+					"path": [
+						"api",
+						"v1",
+						"recipe",
+						"5000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Recipe",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=utf8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8882/api/v1/recipe/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8882",
+					"path": [
+						"api",
+						"v1",
+						"recipe",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Recipe Negetive",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=utf8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8882/api/v1/recipe/2000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8882",
+					"path": [
+						"api",
+						"v1",
+						"recipe",
+						"2000"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
