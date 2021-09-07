@@ -5,7 +5,7 @@ Recipe API
 Clone the repository to your local 
 
 ```
-git clone https://github.com/maitri19/recepieApi.git
+git clone https://github.com/maitri19/recepie-api.git
 
 ```
 
